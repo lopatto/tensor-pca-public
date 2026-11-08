@@ -1,0 +1,117 @@
+version: v0.4
+project:
+  name: Statistical thresholds for Tensor PCA
+  description: We formalize in Lean the principal statistical and constrained-landscape results of Statistical
+    thresholds for Tensor PCA by Jagannath, Lopatto and Miolane, following a local expanded manuscript prepared
+    solely by Patrick Lopatto, the formalization’s maintainer. This elaborated manuscript was prepared
+    to facilitate autoformalization. At nonnegative signal strength in the ordered Gaussian tensor model,
+    we prove the detection threshold below and above criticality for even orders k ≥ 6. For k ≥ 3, we
+    prove the maximum-likelihood value limit at every nonnegative signal strength and the maximum-likelihood
+    absolute-overlap limit away from criticality. We prove optimality bounds for independently randomized
+    measurable unit estimators at nonnegative noncritical strengths, and tensor MMSE formulas at positive
+    noncritical strengths. We also prove the discontinuous overlap transition, consistent testing among
+    fixed nonempty finite families of distinct supercritical strengths, constrained expected and almost-sure
+    energy limits for signed overlaps in [-1,1], and associated variational and landscape conclusions.
+    Almost-sure limits concern fixed parameters and allow arbitrary coupling across dimensions. For
+    interior overlaps, the four-parameter variational reduction establishes equality of infima; unrestricted
+    minimizer attainment is not claimed.
+  authors:
+  - Patrick Lopatto
+  responsible_maintainers:
+  - Patrick Lopatto
+  license: Apache-2.0
+classification:
+  arxiv:
+  - math.PR
+  - math.ST
+  msc2020:
+  - 60B20
+  - 82B44
+sources:
+- type: manuscript
+  title: Statistical thresholds for Tensor PCA — maintainer’s local revision for autoformalization
+  authors:
+  - Patrick Lopatto
+  id: Statistical thresholds for Tensor PCA, maintainer’s local revision for autoformalization
+  relationship: formalizes
+  note: Patrick Lopatto alone prepared and is responsible for the revisions and expansions in this local
+    version, created to facilitate autoformalization. Its underlying source is the paper by Aukosh Jagannath,
+    Patrick Lopatto and Léo Miolane, cited separately below. The local formulation uses absolute-overlap
+    estimator optimality, zero-overlap global maximality for 0 ≤ λ ≤ λc, an infimum variational value
+    and the displayed continuous four-parameter family. The four-parameter export proves equality of
+    infima, without unrestricted minimizer attainment. The local manuscript is not distributed; Challenge
+    provides the exact formalized statements and hypotheses, and README gives the source-number correspondence
+    and scope.
+- type: paper
+  title: Statistical thresholds for Tensor PCA
+  authors:
+  - Aukosh Jagannath
+  - Patrick Lopatto
+  - Léo Miolane
+  id: arXiv:1812.03403v2
+  location: https://arxiv.org/abs/1812.03403v2
+  relationship: other
+  note: 'Published in The Annals of Applied Probability 30(4) (2020), 1910–1933; DOI: https://doi.org/10.1214/19-AAP1547.
+    The arXiv v2 source is the exact public baseline used for the maintainer’s local revision. The original
+    paper supplies the principal mathematical results; the maintainer’s revision supplies the precise
+    revised formulations formalized here. README records their substantive differences and maps the
+    result numbers. This record does not claim literal coverage of every assertion in arXiv v2.'
+related_formalizations:
+- id: https://github.com/pmaronow/slowequilibration-palomar/tree/a28aaa336343c4caf43791ababd8ed0ee5c7b58e
+  relationship: adapts
+  note: Gaussian, spherical, landscape and determinant infrastructure; headers retain all-lean, openai/math
+    and aging-temp origins.
+- id: https://github.com/human-ai-mathematics/kls-lean/tree/33fff6ea218ae07e42115bd1eacfcf7d39c534cb
+  relationship: adapts
+  note: Gaussian Poincare sources.
+- id: https://github.com/pmaronow/arbitrary-rsb-palomar/tree/5162e2d15b440ce46fd322f20eb429468d601948
+  relationship: adapts
+  note: Finite Gaussian log-step sources.
+- id: https://github.com/teorth/pfr/tree/3d7898164ebff70a809dce618f9082a7b39e7850
+  relationship: adapts
+  note: Finite entropy proof pattern.
+- id: https://github.com/nitromannitol/Lattice-Probability/tree/a40ffead0cc9abcfc25ab00544a772d4339edf8d
+  relationship: adapts
+  note: KL variational proof pattern.
+- id: https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb
+  relationship: adapts
+  note: Credited Gaussian, matrix/GOE and determinant proof origins, principally obtained through pmaronow/slowequilibration-palomar;
+    source headers retain original paths, revisions and adaptations.
+- id: https://github.com/pmaronow/all-lean/tree/4b5409b513d8ae9160b29401bff2ce6d3e95e5f1
+  relationship: adapts
+  note: Intermediate source of selected foundational proof files obtained through pmaronow/slowequilibration-palomar;
+    original licenses and origin notices are retained. Historical origin identifier; the accessible
+    distribution used here is https://github.com/pmaronow/slowequilibration-palomar/tree/a28aaa336343c4caf43791ababd8ed0ee5c7b58e.
+    Direct public access to the origin has not been established.
+- id: https://github.com/pmaronow/aging-temp/tree/e28568e30a6ea1e20fce2b8e0a3a72da15759209
+  relationship: adapts
+  note: 'Attributed original retained-count sources for eighteen selected MIT files, obtained through
+    the public slowequilibration distribution and its source-origin records. Original file/blob hashes
+    were verified there; direct public access to this origin repository was not established. Accessible
+    distribution: https://github.com/pmaronow/slowequilibration-palomar/tree/a28aaa336343c4caf43791ababd8ed0ee5c7b58e.'
+- id: https://github.com/pmaronow/sk-mean-bias-palomar/tree/7601a9d5ade08066632bc68b9a615e163f2dd02c
+  relationship: adapts
+  note: Original Gaussian concentration source obtained through the public slowequilibration distribution
+    and its source-origin records; original file/blob hash and retained MIT notice were verified there.
+automation:
+  methods:
+  - method: agent
+    models:
+    - GPT-6
+    framework: OpenAI Codex
+    tool_setup: Lean 4.35.0, pinned Mathlib, Lean Beam and batch Lake builds.
+    prompting_notes: Proof generation, refinement and packaging used cooperating agents; exact historical
+      model variants were not recorded.
+  - method: agent
+    models:
+    - GPT-6
+    framework: OpenAI Codex
+    tool_setup: Separate source/type/definition/prerequisite reviews and build/axiom audits.
+    prompting_notes: Review used agents independent of the corresponding proof task.
+  notes: Codex agents also assisted the maintainer in preparing the local manuscript revisions and expansions.
+review:
+  status: agent-reviewed
+  notes: Independent automated source, definition, elaborated-type and scope review completed. Exact-commit
+    mechanical verification is recorded in the official Palomar preflight reports linked from README.
+    No exact-commit preflight result is claimed for this snapshot. No independent human review of the
+    Lean formalization is asserted. Mechanical preflight is not Palomar editorial acceptance or registration.

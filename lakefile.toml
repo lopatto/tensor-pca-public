@@ -1,0 +1,24 @@
+name = "tensor_pca"
+version = "0.1.0"
+defaultTargets = ["TensorPCA", "Challenge", "Solution", "StatementChecks"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
+
+[[lean_lib]]
+name = "TensorPCA"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
+
+[[lean_lib]]
+name = "StatementChecks"
+

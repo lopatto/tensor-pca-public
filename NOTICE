@@ -1,0 +1,22 @@
+Statistical thresholds for Tensor PCA
+
+Copyright (c) 2026 Patrick Lopatto. New project code is licensed under the
+Apache License, Version 2.0. Existing third-party sources retain the licenses
+and notices identified in their source headers.
+
+Selected proof sources are adapted from pmaronow/slowequilibration-palomar
+at a28aaa336343c4caf43791ababd8ed0ee5c7b58e (Apache-2.0). Its all-lean
+foundations originate from pmaronow/all-lean at
+4b5409b513d8ae9160b29401bff2ce6d3e95e5f1. Selected MIT sources retain their
+complete copyright, permission and disclaimer notices in this distribution.
+Adapted openai/math Gaussian, GOE and determinant proofs retain original paths,
+revision information and adaptation notices in their source headers; the tensor
+landscape sources also preserve their aging-temp origin notices.
+
+Selected Gaussian Poincare sources are adapted from
+human-ai-mathematics/kls-lean at
+33fff6ea218ae07e42115bd1eacfcf7d39c534cb (Apache-2.0).
+Additional attributed proofs and proof patterns come from
+pmaronow/arbitrary-rsb-palomar, teorth/pfr and
+nitromannitol/Lattice-Probability at the immutable revisions identified in
+source headers and formalization.yaml.

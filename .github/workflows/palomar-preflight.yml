@@ -1,0 +1,25 @@
+name: Palomar mechanical preflight
+on:
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: Full 40-character source commit SHA to verify
+        required: true
+        type: string
+      request_id:
+        description: Unique 12-character lowercase alphanumeric request ID
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  palomar-preflight:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+    with:
+      repository: lopatto/tensor-pca-public
+      commit: ${{ inputs.source_commit }}
+      pipeline_commit: 14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+      request_id: ${{ inputs.request_id }}
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: '{"comparator_config_path":"comparator.json","authorization_relationship":"I have approval from a responsible author or maintainer"}'

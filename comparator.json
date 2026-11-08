@@ -1,0 +1,24 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "TensorPCA.Paper.discontinuousTransition",
+    "TensorPCA.Paper.fourParameterReduction",
+    "TensorPCA.Paper.detection",
+    "TensorPCA.Paper.tensorMMSE",
+    "TensorPCA.Paper.estimatorOptimality",
+    "TensorPCA.Paper.mleValue",
+    "TensorPCA.Paper.mleOverlap",
+    "TensorPCA.Paper.mleAttainment",
+    "TensorPCA.Paper.finiteStrengthTesting",
+    "TensorPCA.Paper.variationalConclusions",
+    "TensorPCA.Paper.landscape",
+    "TensorPCA.Paper.constrainedLimit"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}
